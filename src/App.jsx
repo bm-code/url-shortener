@@ -11,7 +11,6 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(url);
     setLoading(true);
     fetch(`${API_URL}${url}`)
       .then(res => {
@@ -45,7 +44,7 @@ function App() {
         <div className="shorted-urls">
           <ul>
             <li className="original-link">Original: <a href={shortedUrls.original_link} target="_blank">{shortedUrls.original_link}</a></li>
-            <li className="shorted-link">Url acortada: <a href={shortedUrls.short_link} target="_blank">{shortedUrls.short_link}</a></li>
+            <li className="shorted-link">Url acortada: <a href={`http://${shortedUrls.short_link}`} target="_blank">{shortedUrls.short_link}</a></li>
           </ul>
         </div>
 
