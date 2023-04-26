@@ -39,7 +39,7 @@ function App() {
 
       {error && <p>Introduce una URL válida</p>}
 
-      {shortedUrls &&
+      {shortedUrls.length !== 0 &&
 
         <div className="shorted-urls">
           <ul>
